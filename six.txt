@@ -1,0 +1,20 @@
+#!/bin/bash
+
+echo "enter user name"
+read user
+
+sudo useradd $user
+
+echo "Adding user..."
+echo "Add user to uid (2000) "
+sudo usermod -u 2000 $user
+echo "Add user to gid (1000)"
+sudo usermod -g 1000  $user
+echo "Creating home directory"
+sudo mkdir "/home/"$user
+echo "Changing your profile"
+echo "Enter your name"
+read name 
+echo "Enter your address"
+read ad
+sudo usermod -c "$ad,$name" $user 

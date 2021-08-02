@@ -1,0 +1,14 @@
+#!/bin/bash
+
+echo "Enter your upper range"
+read ur
+echo "Enter your second range"
+read sr
+
+for ((i=$ur;i<$sr;i++))
+#for i in {1..4..1}
+do
+	echo $i
+	touch $i.txt
+	
+done

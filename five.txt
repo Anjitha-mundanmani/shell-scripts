@@ -1,0 +1,24 @@
+
+
+echo "enter first num"
+read a
+echo "enter second num"
+read b
+
+#addition = echo "addition"
+#substraction = echo "substraction"
+#multiplication = echo "multiplication"
+#division = echo "division"
+
+echo "which operation do you want ?"
+read c
+
+if [[ $c == addition ]];then
+	echo $(( a + b))
+elif [[ $c == substraction ]];then
+	echo $(( a-b ))
+elif [[ $c == multiplication ]];then
+	echo $(( a*b ))
+elif [[ $c == division ]];then
+	echo $(( a/b ))
+fi
